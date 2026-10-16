@@ -54,8 +54,6 @@ body{
 }
 .main-wrap,.sidebar{position:relative;z-index:1;}
 body.dark{background:#1f241d;--bg:#1f241d;--bg-soft:#2a2f27;--bg-panel:#2f352b;--ink:#e8e4da;--text-soft:#a8a294;--accent:#9bbc8a;--accent-deep:#b8d4a8;--accent-soft:rgba(155,188,138,0.16);--line:rgba(255,255,255,0.06);--line-strong:rgba(255,255,255,0.12);}
-.deco-line{transition:opacity 0.4s ease, filter 0.4s ease;}
-body.dark .deco-line{opacity:0.65 !important;filter:drop-shadow(0 0 6px rgba(155,188,138,0.25));}
 h1,h2,h3,h4,.brand{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;font-weight:700;}
 .glass{
   background:rgba(255,255,255,0.72);
@@ -198,19 +196,12 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
 <body>
 <aside class="sidebar" id="sidebar">
   <div class="brand">
-    <svg viewBox="0 0 48 48" class="w-11 h-11" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M24 4 C14 4, 6 14, 6 26 C6 38, 14 44, 24 44 C34 44, 42 38, 42 26 C42 14, 34 4, 24 4 Z"/>
-      <path d="M24 4 L24 44"/>
-      <path d="M24 12 C18 14, 14 20, 12 26"/>
-      <path d="M24 18 C30 20, 34 26, 36 32"/>
-      <path d="M24 28 C18 30, 14 36, 12 42"/>
-      <path d="M24 34 C30 36, 34 40, 36 42"/>
-    </svg>
+    <img src="https://cdn.usefulpix.com/clipart/sage/sage-02.png" class="w-9 h-9 object-contain" alt="logo">
     Iris <em>FoodBoard</em>
   </div>
   <div class="side-item active" data-target="home">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l9-9 9 9"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
-    <span>首页</span>
+    <span>仪表盘首页</span>
   </div>
   <div class="side-item" data-target="list">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11h16"/><path d="M5 11c0-4 3-7 7-7s7 3 7 7"/><path d="M5 11v9a2 2 0 002 2h10a2 2 0 002-2v-9"/></svg>
@@ -241,14 +232,7 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
 
 <main class="main-wrap">
   <header class="nav-glass glass mb-4 p-3 flex items-center justify-between flex-wrap gap-2 relative overflow-hidden">
-    <svg viewBox="0 0 80 80" class="deco-line absolute right-6 top-1/2 -translate-y-1/2 w-14 h-14 hidden md:block" fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
-      <path d="M40 8 C28 8, 18 20, 18 36 C18 52, 28 64, 40 72 C52 64, 62 52, 62 36 C62 20, 52 8, 40 8 Z"/>
-      <path d="M40 8 L40 72"/>
-      <path d="M40 18 C32 20, 26 28, 24 36"/>
-      <path d="M40 26 C48 28, 54 34, 56 42"/>
-      <path d="M40 40 C32 42, 26 50, 24 58"/>
-      <path d="M40 48 C48 50, 54 56, 56 64"/>
-    </svg>
+    <img src="https://cdn.usefulpix.com/clipart/sage/sage-05.png" class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 opacity-50 hidden md:block" alt="deco">
     <div class="flex items-center gap-3">
       <button class="btn-soft md:hidden" onclick="toggleSidebar()">☰</button>
       <div class="text-sm text-textSoft">
@@ -263,14 +247,7 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
   </header>
 
   <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5 relative">
-    <svg viewBox="0 0 120 120" class="deco-line absolute -top-8 -right-4 w-36 h-36 hidden lg:block rotate-12" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.45">
-      <path d="M16 112 C32 96, 48 80, 64 64 C80 48, 96 32, 112 16"/>
-      <path d="M28 100 C34 96, 40 98, 44 104 C46 110, 40 116, 34 112 C28 108, 24 104, 28 100 Z"/>
-      <path d="M44 84 C50 80, 56 82, 60 88 C62 94, 56 100, 50 96 C44 92, 40 88, 44 84 Z"/>
-      <path d="M60 68 C66 64, 72 66, 76 72 C78 78, 72 84, 66 80 C60 76, 56 72, 60 68 Z"/>
-      <path d="M76 52 C82 48, 88 50, 92 56 C94 62, 88 68, 82 64 C76 60, 72 56, 76 52 Z"/>
-      <path d="M92 36 C98 32, 104 34, 108 40 C110 46, 104 52, 98 48 C92 44, 88 40, 92 36 Z"/>
-    </svg>
+    <img src="https://cdn.usefulpix.com/clipart/sage/sage-03.png" class="absolute -top-4 -right-4 w-16 h-16 opacity-45 hidden lg:block rotate-12" alt="sage deco">
     <div class="stat-card">
       <p class="text-sm text-textSoft">菜品总数</p>
       <p class="text-2xl font-bold text-accent mt-1" id="statTotal">0</p>
@@ -289,13 +266,7 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
     </div>
   </section>
 
-  <section class="glass p-4 mb-5 relative overflow-hidden">
-    <svg viewBox="0 0 80 80" class="deco-line absolute -right-2 -bottom-2 w-20 h-20 hidden md:block" fill="none" stroke="var(--accent)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.4">
-      <path d="M8 72 C20 68, 32 64, 44 52 C56 40, 68 24, 72 8"/>
-      <path d="M16 64 C22 60, 28 62, 32 68 C35 74, 27 78, 22 72 C18 68, 14 66, 16 64 Z"/>
-      <path d="M32 50 C38 46, 44 48, 48 54 C51 60, 43 64, 38 58 C34 54, 30 52, 32 50 Z"/>
-      <path d="M48 36 C54 32, 60 34, 64 40 C67 46, 59 50, 54 44 C50 40, 46 38, 48 36 Z"/>
-    </svg>
+  <section class="glass p-4 mb-5">
     <p class="text-textSoft text-sm mb-3">📍 南区食堂选择（点击切换筛选）</p>
     <div class="flex gap-2 overflow-x-auto hide-scroll">
       <button onclick="switchCanteen('all')" data-ct="all" class="ct-btn btn-soft active">全部食堂</button>
@@ -307,28 +278,8 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
   </section>
 
   <section class="glass p-6 mb-5 overflow-hidden relative">
-    <svg viewBox="0 0 140 140" class="deco-line absolute top-0 right-0 w-40 h-40 hidden lg:block" fill="none" stroke="var(--accent)" stroke-width="1.0" stroke-linecap="round" stroke-linejoin="round" opacity="0.30">
-      <path d="M20 130 C36 114, 52 98, 68 82 C84 66, 100 50, 116 34 C124 26, 130 20, 132 12"/>
-      <path d="M32 118 C38 114, 44 116, 48 122 C51 128, 43 132, 37 126 C32 122, 28 120, 32 118 Z"/>
-      <path d="M48 102 C54 98, 60 100, 64 106 C67 112, 59 116, 53 110 C48 106, 44 104, 48 102 Z"/>
-      <path d="M64 86 C70 82, 76 84, 80 90 C83 96, 75 100, 69 94 C64 90, 60 88, 64 86 Z"/>
-      <path d="M80 70 C86 66, 92 68, 96 74 C99 80, 91 84, 85 78 C80 74, 76 72, 80 70 Z"/>
-      <path d="M96 54 C102 50, 108 52, 112 58 C115 64, 107 68, 101 62 C96 58, 92 56, 96 54 Z"/>
-      <path d="M112 38 C118 34, 124 36, 128 42 C130 46, 126 50, 122 46 C118 42, 114 40, 112 38 Z"/>
-      <path d="M28 124 C36 120, 42 122, 46 128" opacity="0.6"/>
-      <path d="M44 108 C52 104, 58 106, 62 112" opacity="0.6"/>
-      <path d="M60 92 C68 88, 74 90, 78 96" opacity="0.6"/>
-      <path d="M76 76 C84 72, 90 74, 94 80" opacity="0.6"/>
-      <path d="M92 60 C100 56, 106 58, 110 64" opacity="0.6"/>
-    </svg>
-    <svg viewBox="0 0 100 100" class="deco-line absolute bottom-4 left-4 w-24 h-24 hidden lg:block" fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
-      <path d="M50 8 C30 8, 14 28, 14 52 C14 72, 30 92, 50 92 C70 92, 86 72, 86 52 C86 28, 70 8, 50 8 Z"/>
-      <path d="M50 8 L50 92"/>
-      <path d="M50 20 C40 22, 32 30, 28 40"/>
-      <path d="M50 30 C60 32, 68 40, 72 50"/>
-      <path d="M50 48 C40 50, 32 58, 28 68"/>
-      <path d="M50 58 C60 60, 68 68, 72 78"/>
-    </svg>
+    <img src="https://cdn.usefulpix.com/clipart/sage/sage-07.png" class="absolute top-2 right-4 w-16 h-16 opacity-65 hidden lg:block rotate-12" alt="sage deco">
+    <img src="https://cdn.usefulpix.com/clipart/sage/sage-08.png" class="absolute bottom-3 left-3 w-12 h-12 opacity-50 hidden lg:block -rotate-12" alt="sage leaf">
     <div class="flex flex-col md:flex-row items-center gap-5 relative z-10">
       <div class="flex-1">
         <p class="hero-sub text-lg mb-1">新鲜每一餐 · 轻盈每一堂</p>
@@ -357,29 +308,15 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
     </div>
   </section>
 
-  <section id="recBlock" class="glass p-5 mb-5 relative overflow-hidden">
-    <svg viewBox="0 0 100 100" class="deco-line absolute -top-3 right-6 w-24 h-24 hidden lg:block" fill="none" stroke="var(--accent)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.35">
-      <path d="M12 88 C24 80, 36 72, 48 56 C60 40, 72 28, 88 12"/>
-      <path d="M24 78 C30 74, 36 76, 40 82 C43 88, 35 92, 29 86 C24 82, 20 80, 24 78 Z"/>
-      <path d="M40 62 C46 58, 52 60, 56 66 C59 72, 51 76, 45 70 C40 66, 36 64, 40 62 Z"/>
-      <path d="M56 46 C62 42, 68 44, 72 50 C75 56, 67 60, 61 54 C56 50, 52 48, 56 46 Z"/>
-      <path d="M72 30 C78 26, 84 28, 88 34 C90 38, 86 42, 82 38 C78 34, 74 32, 72 30 Z"/>
-    </svg>
-    <h3 class="section-title text-accent text-lg mb-3 relative z-10">🌿 今日健康推荐菜单（大学生均衡版）</h3>
+  <section id="recBlock" class="glass p-5 mb-5">
+    <h3 class="section-title text-accent text-lg mb-3">🌿 今日健康推荐菜单（大学生均衡版）</h3>
     <div id="recMenu" class="grid grid-cols-1 md:grid-cols-3 gap-3"></div>
     <p class="mt-2 text-textSoft">推荐套餐总热量：<b id="recTotalCal">0</b> kcal</p>
     <button onclick="refreshRecommend()" class="mt-3 text-accent text-sm underline">换一批推荐</button>
   </section>
 
-  <section class="glass p-5 mb-5 relative overflow-hidden">
-    <svg viewBox="0 0 100 100" class="deco-line absolute -bottom-4 -left-2 w-24 h-24 hidden lg:block" fill="none" stroke="var(--accent)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.30">
-      <path d="M8 12 C14 28, 20 44, 32 56 C44 68, 60 76, 80 84"/>
-      <path d="M16 22 C22 18, 28 20, 32 26 C34 32, 26 36, 20 30 C16 26, 12 24, 16 22 Z"/>
-      <path d="M32 38 C38 34, 44 36, 48 42 C50 48, 42 52, 36 46 C32 42, 28 40, 32 38 Z"/>
-      <path d="M48 54 C54 50, 60 52, 64 58 C66 64, 58 68, 52 62 C48 58, 44 56, 48 54 Z"/>
-      <path d="M64 70 C70 66, 76 68, 80 74 C82 78, 78 82, 74 78 C70 74, 66 72, 64 70 Z"/>
-    </svg>
-    <h3 class="section-title text-accent text-lg mb-3 relative z-10">🍃 食堂热量分布概览</h3>
+  <section class="glass p-5 mb-5">
+    <h3 class="section-title text-accent text-lg mb-3">🍃 食堂热量分布概览</h3>
     <div style="height:220px"><canvas id="calChart"></canvas></div>
   </section>
 
@@ -410,15 +347,8 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
   </div>
   <div id="foodList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-6"></div>
 
-  <section id="rankBlock" class="glass p-5 mb-5 hidden relative overflow-hidden">
-    <svg viewBox="0 0 100 100" class="deco-line absolute -top-3 -right-2 w-28 h-28 hidden lg:block" fill="none" stroke="var(--accent)" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" opacity="0.32">
-      <path d="M14 86 C28 72, 42 58, 56 44 C70 30, 84 16, 90 8"/>
-      <path d="M26 74 C32 70, 38 72, 42 78 C45 84, 37 88, 31 82 C26 78, 22 76, 26 74 Z"/>
-      <path d="M42 58 C48 54, 54 56, 58 62 C61 68, 53 72, 47 66 C42 62, 38 60, 42 58 Z"/>
-      <path d="M58 42 C64 38, 70 40, 74 46 C77 52, 69 56, 63 50 C58 46, 54 44, 58 42 Z"/>
-      <path d="M74 26 C80 22, 86 24, 90 30 C92 34, 88 38, 84 34 C80 30, 76 28, 74 26 Z"/>
-    </svg>
-    <h3 class="section-title text-accent text-lg mb-3 relative z-10">🌡️ 热量排行榜（从低到高）</h3>
+  <section id="rankBlock" class="glass p-5 mb-5 hidden">
+    <h3 class="section-title text-accent text-lg mb-3">🌡️ 热量排行榜（从低到高）</h3>
     <div id="rankList"></div>
   </section>
 
@@ -457,7 +387,7 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
   </section>
 
   <footer class="text-center text-xs text-textSoft opacity-70 py-4">
-    南区食堂个人美食推荐
+    南区食堂美食推荐仪表盘｜仅供大学生参考 · 热量为估算值
   </footer>
 </main>
 
@@ -467,7 +397,7 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
       <h4 class="section-title text-accent text-lg" id="modalTitle"></h4>
       <button onclick="closeModal()" class="btn-soft">✕</button>
     </div>
-    <img id="modalImg" class="w-full h-48 object-cover rounded-2xl mb-3" alt="菜品图"/>
+    <img id="modalImg" class="w-full h-48 object-cover rounded-2xl mb-3" alt="菜品图" onerror="onImgErr(this)"/>
     <div id="modalBody"></div>
     <div class="flex gap-2 mt-4">
       <button id="modalFavBtn" class="btn-primary" onclick="toggleFavFromModal()">❤️ 收藏</button>
@@ -481,6 +411,13 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
 </div>
 
 <script>
+// ====================== 在这里修改菜品数据，图片写在img字段 ======================
+/*
+图片路径写法示例：
+本地图片和html同文件夹： img:"meicai.jpg"
+图片放在images文件夹：     img:"images/meicai.jpg"
+线上网络图片：            img:"https://xxx/xxx.jpg"
+*/
 let foodData=[
   {id:1,name:"梅菜扣肉",canteen:"ct1",type:"荤菜",img:"https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Chinese%20braised%20pork%20belly%20with%20preserved%20mustard%20greens%20Mei%20Cai%20Kou%20Rou%20served%20in%20bowl%20appetizing%20food%20photography&image_size=square_hd",cal:420,fat:28,protein:22,carb:16},
   {id:2,name:"香脆虾",canteen:"ct1",type:"荤菜",img:"https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Crispy%20fried%20shrimp%20Chinese%20style%20golden%20crispy%20food%20photography&image_size=square_hd",cal:310,fat:16,protein:28,carb:10},
@@ -513,6 +450,10 @@ let foodData=[
   {id:26,name:"椒麻肉酱拌面",canteen:"ct4",type:"汤面",img:"https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Pepper%20and%20spicy%20meat%20sauce%20noodles%20food%20photography&image_size=square_hd",cal:420,fat:18,protein:18,carb:49},
   {id:27,name:"煲仔饭",canteen:"ct4",type:"主食",img:"https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Cantonese%20clay%20pot%20rice%20with%20meat%20food%20photography&image_size=square_hd",cal:470,fat:25,protein:21,carb:54}
 ];
+
+const FOOD_PLACEHOLDER="data:image/svg+xml;charset=utf-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#e8ede0"/><text x="100" y="100" font-size="72" text-anchor="middle" dominant-baseline="central">🍽️</text></svg>`);
+
+function onImgErr(el){el.onerror=null;el.src=FOOD_PLACEHOLDER;el.classList.add("food-placeholder");}
 
 let fav=JSON.parse(localStorage.getItem("foodFav")||"[]");
 let currentCanteen="all";
@@ -600,15 +541,8 @@ function renderList(){
     const isF=fav.includes(item.id);
     box.innerHTML+=`
     <div class="food-card" onclick="openDetail(${item.id})">
-      <svg viewBox="0 0 48 48" class="deco-line absolute top-2 right-2 w-10 h-10 z-10" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.45">
-        <path d="M24 4 C14 4, 6 14, 6 26 C6 38, 14 44, 24 44 C34 44, 42 38, 42 26 C42 14, 34 4, 24 4 Z"/>
-        <path d="M24 4 L24 44"/>
-        <path d="M24 12 C18 14, 14 20, 12 26"/>
-        <path d="M24 18 C30 20, 34 26, 36 32"/>
-        <path d="M24 28 C18 30, 14 36, 12 42"/>
-        <path d="M24 34 C30 36, 34 40, 36 42"/>
-      </svg>
-      <img src="${item.img}" alt="${item.name}" class="w-full h-36 object-cover"/>
+      <img src="https://cdn.usefulpix.com/clipart/sage/sage-04.png" class="absolute top-2 right-2 w-8 h-8 opacity-85 z-10" alt="deco">
+      <img src="${item.img}" alt="${item.name}" class="w-full h-36 object-cover" onerror="onImgErr(this)"/>
       <div class="p-4">
         <div class="flex justify-between items-center">
           <b class="text-textSoft">${item.name}</b>
@@ -673,15 +607,8 @@ function searchFood(){
   arr.forEach(item=>{
     box.innerHTML+=`
     <div class="food-card" onclick="openDetail(${item.id})">
-      <svg viewBox="0 0 48 48" class="deco-line absolute top-2 right-2 w-10 h-10 z-10" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.45">
-        <path d="M24 4 C14 4, 6 14, 6 26 C6 38, 14 44, 24 44 C34 44, 42 38, 42 26 C42 14, 34 4, 24 4 Z"/>
-        <path d="M24 4 L24 44"/>
-        <path d="M24 12 C18 14, 14 20, 12 26"/>
-        <path d="M24 18 C30 20, 34 26, 36 32"/>
-        <path d="M24 28 C18 30, 14 36, 12 42"/>
-        <path d="M24 34 C30 36, 34 40, 36 42"/>
-      </svg>
-      <img src="${item.img}" alt="${item.name}" class="w-full h-36 object-cover"/>
+      <img src="https://cdn.usefulpix.com/clipart/sage/sage-04.png" class="absolute top-2 right-2 w-8 h-8 opacity-85 z-10" alt="deco">
+      <img src="${item.img}" alt="${item.name}" class="w-full h-36 object-cover" onerror="onImgErr(this)"/>
       <div class="p-4">
         <div class="flex justify-between"><b class="text-textSoft">${item.name}</b><span class="text-xs text-accent">${ctNameMap[item.canteen]}</span></div>
         <p class="text-xs text-gray-500 mt-1">分类：${item.type}</p>
@@ -698,7 +625,7 @@ function renderRank(){
     const highlight=idx<3?"text-accent font-bold":"";
     box.innerHTML+=`
     <div class="glass p-3 mb-2 cursor-pointer flex justify-between items-center" onclick="openDetail(${it.id})">
-      <div><b class="${highlight}">#${idx+1} ${it.name}</b> <span class="text-xs text-gray-500">${ctNameMap[it.canteen]}</span></div>
+      <div><b class="${highlight}">${idx+1}. ${it.name}</b> <span class="text-xs text-gray-500">${ctNameMap[it.canteen]}</span></div>
       <div class="text-accent font-semibold">${it.cal} kcal</div>
     </div>`;
   })
@@ -727,15 +654,8 @@ function renderFav(){
   arr.forEach(item=>{
     box.innerHTML+=`
     <div class="food-card" onclick="openDetail(${item.id})">
-      <svg viewBox="0 0 48 48" class="deco-line absolute top-2 right-2 w-10 h-10 z-10" fill="none" stroke="var(--accent)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity="0.45">
-        <path d="M24 4 C14 4, 6 14, 6 26 C6 38, 14 44, 24 44 C34 44, 42 38, 42 26 C42 14, 34 4, 24 4 Z"/>
-        <path d="M24 4 L24 44"/>
-        <path d="M24 12 C18 14, 14 20, 12 26"/>
-        <path d="M24 18 C30 20, 34 26, 36 32"/>
-        <path d="M24 28 C18 30, 14 36, 12 42"/>
-        <path d="M24 34 C30 36, 34 40, 36 42"/>
-      </svg>
-      <img src="${item.img}" alt="${item.name}" class="w-full h-36 object-cover"/>
+      <img src="https://cdn.usefulpix.com/clipart/sage/sage-04.png" class="absolute top-2 right-2 w-8 h-8 opacity-85 z-10" alt="deco">
+      <img src="${item.img}" alt="${item.name}" class="w-full h-36 object-cover" onerror="onImgErr(this)"/>
       <div class="p-4">
         <div class="flex justify-between"><b class="text-textSoft">${item.name}</b><span class="text-xs text-accent">${ctNameMap[item.canteen]}</span></div>
         <p class="text-xs text-accent mt-1">🔥 ${item.cal} kcal</p>
@@ -750,8 +670,8 @@ function openDetail(id){
   document.getElementById("modalImg").src=it.img;
   document.getElementById("modalImg").alt=it.name;
   document.getElementById("modalBody").innerHTML=`
-  <p class="text-sm mb-2"><span class="font-semibold">食堂：</span>${ctNameMap[it.canteen]}</p>
-  <p class="text-sm mb-2"><span class="font-semibold">分类：</span>${it.type}</p>
+  <p class="text-sm mb-2"><span class="font-semibold">食堂：</span><span class="text-accent underline cursor-pointer" onclick="jumpToCanteen('${it.canteen}')">${ctNameMap[it.canteen]}</span></p>
+  <p class="text-sm mb-2"><span class="font-semibold">分类：</span><span class="text-accent underline cursor-pointer" onclick="jumpToType('${it.type}')">${it.type}</span></p>
   <div class="glass p-3 mt-2">
     <p class="font-semibold text-accent">营养估算（每份）</p>
     <p class="text-sm">🔥 热量：${it.cal} kcal</p>
@@ -759,11 +679,13 @@ function openDetail(id){
     <p class="text-sm">💪 蛋白质：${it.protein} g</p>
     <p class="text-sm">🍚 碳水化合物：${it.carb} g</p>
   </div>
-  <p class="text-xs text-gray-400 mt-2">热量仅估算</p>`;
+  <p class="text-xs text-gray-400 mt-2">*热量仅估算，以食堂实际为准</p>`;
   document.getElementById("modalFavBtn").innerText=fav.includes(id)?"❤️ 已收藏":"🤍 收藏";
   document.getElementById("detailModal").classList.add("open");
 }
 function closeModal(){document.getElementById("detailModal").classList.remove("open");detailId=null;}
+function jumpToCanteen(ct){closeModal();document.querySelector('.side-item[data-target="list"]').click();switchCanteen(ct);window.scrollTo({top:0,behavior:'smooth'});}
+function jumpToType(tp){closeModal();document.querySelector('.side-item[data-target="list"]').click();filterType(tp);window.scrollTo({top:0,behavior:'smooth'});}
 
 function drawChart(){
   if(typeof Chart==="undefined") return;
