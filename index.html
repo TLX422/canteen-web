@@ -309,7 +309,7 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
   </section>
 
   <section id="recBlock" class="glass p-5 mb-5">
-    <h3 class="section-title text-accent text-lg mb-3">🌿 今日健康推荐菜单（大学生均衡版）</h3>
+    <h3 class="section-title text-accent text-lg mb-3">🌿 今日健康推荐菜单</h3>
     <div id="recMenu" class="grid grid-cols-1 md:grid-cols-3 gap-3"></div>
     <p class="mt-2 text-textSoft">推荐套餐总热量：<b id="recTotalCal">0</b> kcal</p>
     <button onclick="refreshRecommend()" class="mt-3 text-accent text-sm underline">换一批推荐</button>
@@ -387,7 +387,7 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
   </section>
 
   <footer class="text-center text-xs text-textSoft opacity-70 py-4">
-    南区食堂美食推荐仪表盘｜仅供大学生参考 · 热量为估算值
+    南区食堂美食推荐
   </footer>
 </main>
 
@@ -411,13 +411,6 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
 </div>
 
 <script>
-// ====================== 在这里修改菜品数据，图片写在img字段 ======================
-/*
-图片路径写法示例：
-本地图片和html同文件夹： img:"meicai.jpg"
-图片放在images文件夹：     img:"images/meicai.jpg"
-线上网络图片：            img:"https://xxx/xxx.jpg"
-*/
 let foodData=[
   {id:1,name:"梅菜扣肉",canteen:"ct1",type:"荤菜",img:"https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Chinese%20braised%20pork%20belly%20with%20preserved%20mustard%20greens%20Mei%20Cai%20Kou%20Rou%20served%20in%20bowl%20appetizing%20food%20photography&image_size=square_hd",cal:420,fat:28,protein:22,carb:16},
   {id:2,name:"香脆虾",canteen:"ct1",type:"荤菜",img:"https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Crispy%20fried%20shrimp%20Chinese%20style%20golden%20crispy%20food%20photography&image_size=square_hd",cal:310,fat:16,protein:28,carb:10},
