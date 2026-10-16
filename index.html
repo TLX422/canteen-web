@@ -457,7 +457,7 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
   </section>
 
   <footer class="text-center text-xs text-textSoft opacity-70 py-4">
-    南区食堂美食推荐仪表盘｜仅供大学生参考 · 热量为估算值
+    南区食堂个人美食推荐
   </footer>
 </main>
 
@@ -481,13 +481,6 @@ body.dark input#searchInput{background:rgba(255,255,255,0.06);color:#e8e4da;}
 </div>
 
 <script>
-// ====================== 在这里修改菜品数据，图片写在img字段 ======================
-/*
-图片路径写法示例：
-本地图片和html同文件夹： img:"meicai.jpg"
-图片放在images文件夹：     img:"images/meicai.jpg"
-线上网络图片：            img:"https://xxx/xxx.jpg"
-*/
 let foodData=[
   {id:1,name:"梅菜扣肉",canteen:"ct1",type:"荤菜",img:"https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Chinese%20braised%20pork%20belly%20with%20preserved%20mustard%20greens%20Mei%20Cai%20Kou%20Rou%20served%20in%20bowl%20appetizing%20food%20photography&image_size=square_hd",cal:420,fat:28,protein:22,carb:16},
   {id:2,name:"香脆虾",canteen:"ct1",type:"荤菜",img:"https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Crispy%20fried%20shrimp%20Chinese%20style%20golden%20crispy%20food%20photography&image_size=square_hd",cal:310,fat:16,protein:28,carb:10},
@@ -766,7 +759,7 @@ function openDetail(id){
     <p class="text-sm">💪 蛋白质：${it.protein} g</p>
     <p class="text-sm">🍚 碳水化合物：${it.carb} g</p>
   </div>
-  <p class="text-xs text-gray-400 mt-2">*热量仅估算，以食堂实际为准</p>`;
+  <p class="text-xs text-gray-400 mt-2">热量仅估算</p>`;
   document.getElementById("modalFavBtn").innerText=fav.includes(id)?"❤️ 已收藏":"🤍 收藏";
   document.getElementById("detailModal").classList.add("open");
 }
